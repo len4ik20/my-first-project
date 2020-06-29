@@ -1,0 +1,83 @@
+:root {
+    --main-color: #000;
+    --main-font: 'Roboto';
+    --aux-font: 'Ubuntu-Light';
+}
+
+@font-face {
+  font-family: 'Ubuntu-Light';
+  src: url('../fonts/Ubuntu/Ubuntu-Light.ttf');
+}
+
+html,
+body,
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    font-family: var(--main-font), var(--aux-font), sans-serif;
+    box-sizing: border-box;
+}
+
+nav {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    right: 50%;
+    transform: translateX(50%);
+    width: 100%;
+    height: 60px;
+    background: var(--main-color);
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, .6);
+  }
+  
+  .nav_item {
+    float: left;
+    padding: 0 15px;
+    line-height: 60px;
+  }
+  
+  .nav_item a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .nav_item:hover {
+    cursor: pointer;
+    background: #222;
+  }
+  
+  section {
+    position: relative;
+    height: 100vh;
+  }
+  
+  .home:before {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.7);
+  }
+  
+  .home:after {
+    position: absolute;
+    z-index: 1;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-image: url('https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80');
+    background-size: cover;
+  }
+  
+  .home_content {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translateX(50%);
+    z-index: 2;
+    color: #fff;
+  }
+  
